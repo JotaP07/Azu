@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azu</title>
+    <link rel="stylesheet" href="../AzuMedieval/css/style.css">
+    <link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="containerHead">
+        <div class="containerlogo">
+            <img id="logoAzu" src="../AzuMedieval/img/LogoAzuAtt.png" alt="logoazu" width="60" height="60" />
+            <div class="color-switcher">
+                <div class="switcher-btn">
+                    <i class="fas fa-paint-roller"></i>
+                </div>
+                <div class="theme-buttons-container">
+                    <span class="theme-buttons" data-color="#00ced1" style="background: #00ced1"></span>
+                    <span class="theme-buttons" data-color="#dc143c" style="background: #dc143c"></span>
+                    <span class="theme-buttons" data-color="#3b3b3b" style="background: #3b3b3b"></span>
+                    <span class="theme-buttons" data-color="#000000" style="background: #000000"></span>
+                    <span class="theme-buttons" data-color="#BDE3F2" style="background: #BDE3F2"></span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <div class="columns">
+            <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>A Fazer</h2>
+                <form class="form">
+                    <input type="text" id="todo-name" placeholder="Nome da Tarefa" required>
+                    <textarea id="todo-description" cols="35" rows="5" placeholder="Descrição da Tarefa"
+                        required></textarea>
+                    <button onclick="addTask('todo')" type="button">Adicionar</button>
+                </form>
+                <div id="todo-taskContent" class="taskContainer" ondragover="allowDrop(event)" ondrop="drop(event)"
+                    ondragstart="drag(event)">
+                    <!-- as tasks irá ser add aqui dentro-->
+                </div>
+            </div>
+            <div class="column" id="inProgress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Em Progresso</h2>
+                <form class="form">
+                    <input type="text" id="inProgress-name" placeholder="Nome da Tarefa" required>
+                    <textarea id="inProgress-description" cols="35" rows="5" placeholder="Descrição da Tarefa"
+                        required></textarea>
+                    <button onclick="addTask('inProgress')" type="button">Adicionar</button>
+                </form>
+                <div id="inProgress-taskContent" class="taskContainer" ondragover="allowDrop(event)"
+                    ondrop="drop(event)" ondragstart="drag(event)">
+                    <!-- as tasks irá ser add aqui dentro-->
+                </div>
+
+            </div>
+            <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Concluídas</h2>
+                <div id="done-taskContent" ondragover="allowDrop(event)" ondrop="drop(event)">
+                    <form class="form" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <input type="text" id="done-name" placeholder="Nome da Tarefa" required>
+                        <textarea id="done-description" cols="35" rows="5" placeholder="Descrição da Tarefa"
+                            required></textarea>
+                        <button onclick="addTask('done')" type="button">Adicionar</button>
+                    </form>
+                    <div id="done-taskContent" class="taskContainer" ondragover="allowDrop(event)" ondrop="drop(event)"
+                        ondragstart="drag(event)">
+                        <!-- as tasks irá ser add aqui dentro-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../AzuMedieval/js/script.js"></script>
+        <script src="../AzuMedieval/js/BGcolor.js"></script>
+</body>
+
+</html>
